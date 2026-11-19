@@ -1,0 +1,80 @@
+const STORE_WHATSAPP = ''; // Add the shop number in international format, e.g. 8801XXXXXXXXX
+
+const products = [
+  {id:'gulabi-garden', name:'গুলাবি বাগান', category:'প্রতিদিনের কালেকশন', tagline:'ফুলেল নকশায় মিষ্টি সাজ।', price:2450, badge:'সবচেয়ে জনপ্রিয়', color:'গোলাপি · আইভরি', fabric:'নরম সুতি মিশ্রণ', image:'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85', position:'center 28%', intro:'নরম গোলাপি রং আর সূক্ষ্ম ফুলেল নকশার এই থ্রি-পিসটি প্রতিদিনের সাজে এনে দেবে নতুন আনন্দ। সুন্দর ছোট ছোট ডিটেইলস—যা আপনার দৈনন্দিন মুহূর্তকে করে তুলবে আরও রঙিন।'},
+  {id:'nil-nodi', name:'নীল নদী', category:'সহজ দিনের কালেকশন', tagline:'যেখানেই যান, থাকুক নীলের ছোঁয়া।', price:2290, badge:'নতুন এসেছে', color:'নীল · আকাশি', fabric:'প্রিন্ট করা লন কাপড়', image:'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=85', position:'center 27%', intro:'সতেজ নীল রঙের ছোঁয়া আর আরামদায়ক নকশা। দুপুরের আড্ডা, বেড়ানো কিংবা ব্যস্ত দিনের জন্য নীল নদী হতে পারে আপনার সহজ পছন্দ।'},
+  {id:'shonar-roddur', name:'সোনার রোদ্দুর', category:'উৎসবের কালেকশন', tagline:'সোনালি বিকেলের মতো সুন্দর।', price:2890, badge:'সীমিত কালেকশন', color:'গাঁদা · ক্রিম', fabric:'টেক্সচার করা সুতি', image:'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85', position:'center 25%', intro:'উষ্ণ গাঁদা রং আর যত্নের নকশায় সোনার রোদ্দুর নিয়ে আসুক আপনার সাজে উৎসবের আমেজ। দাওয়াত কিংবা সাধারণ দিনে—রঙের উজ্জ্বলতায় নিজেকে সাজান।'},
+  {id:'joba-bagan', name:'জবা বাগান', category:'প্রতিদিনের কালেকশন', tagline:'আপনার রঙিন দিনগুলোর সঙ্গী।', price:2590, badge:'সবার পছন্দ', color:'কোরাল · হালকা গোলাপি', fabric:'প্রিন্ট করা সুতি', image:'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=85', position:'center 24%', intro:'প্রাণবন্ত কোরাল রং আর আরামদায়ক কাটের এই থ্রি-পিসটি পরুন যখন আপনার সাজে চাই একটু বাড়তি রঙ।'},
+  {id:'megh-mala', name:'মেঘমালা', category:'স্নিগ্ধ দিনের কালেকশন', tagline:'প্রতিদিনের সাজে স্নিগ্ধতার ছোঁয়া।', price:2350, badge:'প্রিয় পছন্দ', color:'সেজ · হালকা ধূসর', fabric:'আরামদায়ক লন কাপড়', image:'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=85', position:'center 25%', intro:'স্নিগ্ধ সেজ রং আর হালকা কাপড়ে মেঘমালা গরম দিনের জন্য আরামদায়ক পছন্দ। তিনটি পোশাক একসঙ্গে, আপনার মতো করে সাজিয়ে নিন।'},
+  {id:'raat-rani', name:'রাতরানি', category:'উৎসবের কালেকশন', tagline:'সাজে থাকুক একটু আভিজাত্য।', price:3150, badge:'বিশেষ দিনের সাজ', color:'বেরি · প্লাম', fabric:'নকশা করা সুতি মিশ্রণ', image:'https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?auto=format&fit=crop&w=900&q=85', position:'center 25%', intro:'গাঢ় বেরি রং আর সূক্ষ্ম নকশায় রাতরানি বিশেষ দিনের সাজে এনে দেবে আভিজাত্য। মনে রাখার মতো সন্ধ্যার জন্য সুন্দর একটি থ্রি-পিস।'}
+];
+
+const money = value => `৳${value.toLocaleString('bn-BD')}`;
+const whatsappNumber = STORE_WHATSAPP.replace(/\D/g, '');
+const pageProduct = products.find(p => p.id === new URLSearchParams(location.search).get('item'));
+const whatsappMessage = pageProduct
+  ? `আসসালামু আলাইকুম, ${pageProduct.name} থ্রি-পিসটি অর্ডার করতে চাই।`
+  : 'আসসালামু আলাইকুম, রংধনুর থ্রি-পিস সম্পর্কে জানতে চাই।';
+document.querySelectorAll('[data-whatsapp-cta]').forEach(link => {
+  link.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+});
+
+const cardGrid = document.querySelector('#product-grid');
+if (cardGrid) {
+  cardGrid.innerHTML = products.map((p, i) => `
+    <article class="product-card">
+      <a class="product-image-wrap" href="product.html?item=${p.id}" aria-label="${p.name} দেখুন">
+        <img class="product-image" src="${p.image}" alt="${p.name} থ্রি-পিস" style="object-position:${p.position}" loading="lazy">
+        <span class="product-badge">${p.badge}</span>
+        <span class="quick-order">এই থ্রি-পিসটি দেখুন <span>↗</span></span>
+      </a>
+      <div class="product-meta"><a class="product-name" href="product.html?item=${p.id}">${p.name}</a><span class="product-price">${money(p.price)}</span></div>
+      <p class="product-subtitle">${p.tagline}</p>
+      <a class="mobile-order" href="product.html?item=${p.id}">দেখুন ও অর্ডার করুন ↗</a>
+    </article>`).join('');
+}
+
+const year = document.querySelector('#year');
+if (year) year.textContent = new Date().getFullYear().toLocaleString('bn-BD');
+
+const productPage = document.querySelector('.product-page');
+if (productPage) {
+  const id = new URLSearchParams(location.search).get('item');
+  const product = products.find(p => p.id === id) || products[0];
+  document.title = `${product.name} — রংধনু থ্রি-পিস`;
+  document.querySelector('#crumb-name').textContent = product.name;
+  document.querySelector('#detail-category').textContent = product.category;
+  document.querySelector('#detail-name').textContent = product.name;
+  document.querySelector('#detail-price').textContent = money(product.price);
+  document.querySelector('#detail-intro').textContent = product.intro;
+  const detailImage = document.querySelector('#detail-image');
+  detailImage.style.backgroundImage = `url("${product.image}")`;
+  detailImage.style.backgroundPosition = product.position;
+  detailImage.setAttribute('role', 'img');
+  detailImage.setAttribute('aria-label', `${product.name} থ্রি-পিস`);
+  const form = document.querySelector('#order-form');
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    const feedback = document.querySelector('#form-feedback');
+    const size = document.querySelector('#size').value;
+    if (!size) {
+      feedback.textContent = 'আপনার জন্য সঠিক মাপটি পাঠাতে সাইজ বেছে নিন।';
+      document.querySelector('#size').focus();
+      return;
+    }
+    const data = new FormData(form);
+    const orderText = `আসসালামু আলাইকুম, আমি এই পণ্যটি অর্ডার করতে চাই:\n${product.name} — ${money(product.price)}\nসাইজ: ${size}\nনাম: ${data.get('name')}\nফোন: ${data.get('phone')}\nঠিকানা: ${data.get('address')}`;
+    const number = STORE_WHATSAPP.replace(/\D/g, '');
+    if (number) {
+      window.open(`https://wa.me/${number}?text=${encodeURIComponent(orderText)}`, '_blank', 'noopener,noreferrer');
+      feedback.textContent = 'অর্ডারের তথ্য WhatsApp-এ তৈরি হয়েছে। মেসেজটি পাঠান, আমরা ফোনে নিশ্চিত করব।';
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(orderText);
+      feedback.textContent = 'অর্ডারের তথ্য কপি হয়েছে। সরাসরি অর্ডার পাঠাতে দোকানের WhatsApp নম্বর যুক্ত করুন।';
+    } catch {
+      feedback.textContent = 'অর্ডারের তথ্য তৈরি হয়েছে। সরাসরি অর্ডার চালু করতে দোকানের WhatsApp নম্বর যুক্ত করুন।';
+    }
+  });
+}
