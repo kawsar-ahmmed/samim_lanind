@@ -2,12 +2,12 @@ const STORE_WHATSAPP = '8801983930599';
 const DELIVERY_CHARGES = { dhaka: 80, outside: 150 };
 
 const products = [
-  {id:'gulabi-garden', name:'গুলাবি বাগান', category:'প্রতিদিনের কালেকশন', tagline:'ফুলেল নকশায় মিষ্টি সাজ।', price:1499, badge:'সবচেয়ে জনপ্রিয়', color:'গোলাপি · আইভরি', fabric:'নরম সুতি মিশ্রণ', image:'Img/1.webp', position:'center 28%', intro:'নরম গোলাপি রং আর সূক্ষ্ম ফুলেল নকশার এই থ্রি-পিসটি প্রতিদিনের সাজে এনে দেবে নতুন আনন্দ। সুন্দর ছোট ছোট ডিটেইলস—যা আপনার দৈনন্দিন মুহূর্তকে করে তুলবে আরও রঙিন।'},
-  {id:'nil-nodi', name:'নীল নদী', category:'সহজ দিনের কালেকশন', tagline:'যেখানেই যান, থাকুক নীলের ছোঁয়া।', price:1299, badge:'নতুন এসেছে', color:'নীল · আকাশি', fabric:'প্রিন্ট করা লন কাপড়', image:'Img/2.webp', position:'center 27%', intro:'সতেজ নীল রঙের ছোঁয়া আর আরামদায়ক নকশা। দুপুরের আড্ডা, বেড়ানো কিংবা ব্যস্ত দিনের জন্য নীল নদী হতে পারে আপনার সহজ পছন্দ।'},
-  {id:'shonar-roddur', name:'সোনার রোদ্দুর', category:'উৎসবের কালেকশন', tagline:'সোনালি বিকেলের মতো সুন্দর।', price:1299, badge:'সীমিত কালেকশন', color:'গাঁদা · ক্রিম', fabric:'টেক্সচার করা সুতি', image:'Img/3.webp', position:'center 25%', intro:'উষ্ণ গাঁদা রং আর যত্নের নকশায় সোনার রোদ্দুর নিয়ে আসুক আপনার সাজে উৎসবের আমেজ। দাওয়াত কিংবা সাধারণ দিনে—রঙের উজ্জ্বলতায় নিজেকে সাজান।'},
-  {id:'joba-bagan', name:'জবা বাগান', category:'প্রতিদিনের কালেকশন', tagline:'আপনার রঙিন দিনগুলোর সঙ্গী।', price:1299, badge:'সবার পছন্দ', color:'কোরাল · হালকা গোলাপি', fabric:'প্রিন্ট করা সুতি', image:'Img/4.webp', position:'center 24%', intro:'প্রাণবন্ত কোরাল রং আর আরামদায়ক কাটের এই থ্রি-পিসটি পরুন যখন আপনার সাজে চাই একটু বাড়তি রঙ।'},
-  {id:'megh-mala', name:'মেঘমালা', category:'স্নিগ্ধ দিনের কালেকশন', tagline:'প্রতিদিনের সাজে স্নিগ্ধতার ছোঁয়া।', price:1099, badge:'প্রিয় পছন্দ', color:'সেজ · হালকা ধূসর', fabric:'আরামদায়ক লন কাপড়', image:'Img/5.webp', position:'center 25%', intro:'স্নিগ্ধ সেজ রং আর হালকা কাপড়ে মেঘমালা গরম দিনের জন্য আরামদায়ক পছন্দ। তিনটি পোশাক একসঙ্গে, আপনার মতো করে সাজিয়ে নিন।'},
-  {id:'raat-rani', name:'রাতরানি', category:'উৎসবের কালেকশন', tagline:'সাজে থাকুক একটু আভিজাত্য।', price:1099, badge:'বিশেষ দিনের সাজ', color:'বেরি · প্লাম', fabric:'নকশা করা সুতি মিশ্রণ', image:'Img/6.webp', position:'center 25%', intro:'গাঢ় বেরি রং আর সূক্ষ্ম নকশায় রাতরানি বিশেষ দিনের সাজে এনে দেবে আভিজাত্য। মনে রাখার মতো সন্ধ্যার জন্য সুন্দর একটি থ্রি-পিস।'}
+  {id:'gulabi-garden', name:'Embroidered Kameez', category:'প্রতিদিনের কালেকশন', tagline:'ফুলেল নকশায় মিষ্টি সাজ।', price:1499, badge:'সবচেয়ে জনপ্রিয়', color:'গোলাপি · আইভরি', fabric:'নরম সুতি মিশ্রণ', image:'Img/1.webp', position:'center 28%', intro:'নরম গোলাপি রং আর সূক্ষ্ম ফুলেল নকশার এই থ্রি-পিসটি প্রতিদিনের সাজে এনে দেবে নতুন আনন্দ। সুন্দর ছোট ছোট ডিটেইলস—যা আপনার দৈনন্দিন মুহূর্তকে করে তুলবে আরও রঙিন।'},
+  {id:'nil-nodi', name:'Beige Floral Readymade 3-Piece', category:'সহজ দিনের কালেকশন', tagline:'যেখানেই যান, থাকুক নীলের ছোঁয়া।', price:1299, badge:'নতুন এসেছে', color:'নীল · আকাশি', fabric:'প্রিন্ট করা লন কাপড়', image:'Img/2.webp', position:'center 27%', intro:'সতেজ নীল রঙের ছোঁয়া আর আরামদায়ক নকশা। দুপুরের আড্ডা, বেড়ানো কিংবা ব্যস্ত দিনের জন্য নীল নদী হতে পারে আপনার সহজ পছন্দ।'},
+  {id:'shonar-roddur', name:'Royal Purple Readymade 3-Piece', category:'উৎসবের কালেকশন', tagline:'সোনালি বিকেলের মতো সুন্দর।', price:1299, badge:'সীমিত কালেকশন', color:'গাঁদা · ক্রিম', fabric:'টেক্সচার করা সুতি', image:'Img/3.webp', position:'center 25%', intro:'উষ্ণ গাঁদা রং আর যত্নের নকশায় সোনার রোদ্দুর নিয়ে আসুক আপনার সাজে উৎসবের আমেজ। দাওয়াত কিংবা সাধারণ দিনে—রঙের উজ্জ্বলতায় নিজেকে সাজান।'},
+  {id:'joba-bagan', name:'Navy Blue Readymade 3-Piece', category:'প্রতিদিনের কালেকশন', tagline:'আপনার রঙিন দিনগুলোর সঙ্গী।', price:1299, badge:'সবার পছন্দ', color:'কোরাল · হালকা গোলাপি', fabric:'প্রিন্ট করা সুতি', image:'Img/4.webp', position:'center 24%', intro:'প্রাণবন্ত কোরাল রং আর আরামদায়ক কাটের এই থ্রি-পিসটি পরুন যখন আপনার সাজে চাই একটু বাড়তি রঙ।'},
+  {id:'megh-mala', name:'Blue Readymade 3-Piece', category:'স্নিগ্ধ দিনের কালেকশন', tagline:'প্রতিদিনের সাজে স্নিগ্ধতার ছোঁয়া।', price:1099, badge:'প্রিয় পছন্দ', color:'সেজ · হালকা ধূসর', fabric:'আরামদায়ক লন কাপড়', image:'Img/5.webp', position:'center 25%', intro:'স্নিগ্ধ সেজ রং আর হালকা কাপড়ে মেঘমালা গরম দিনের জন্য আরামদায়ক পছন্দ। তিনটি পোশাক একসঙ্গে, আপনার মতো করে সাজিয়ে নিন।'},
+  {id:'raat-rani', name:'Black & White Readymade 3-Piece', category:'উৎসবের কালেকশন', tagline:'সাজে থাকুক একটু আভিজাত্য।', price:1099, badge:'বিশেষ দিনের সাজ', color:'বেরি · প্লাম', fabric:'নকশা করা সুতি মিশ্রণ', image:'Img/6.webp', position:'center 25%', intro:'গাঢ় বেরি রং আর সূক্ষ্ম নকশায় রাতরানি বিশেষ দিনের সাজে এনে দেবে আভিজাত্য। মনে রাখার মতো সন্ধ্যার জন্য সুন্দর একটি থ্রি-পিস।'}
 ];
 
 const money = value => `৳${value.toLocaleString('bn-BD')}`;
@@ -81,21 +81,30 @@ if (productPage) {
       return;
     }
     const data = new FormData(form);
-    const deliveryCharge = DELIVERY_CHARGES[deliveryArea];
-    const deliveryLabel = deliveryArea === 'dhaka' ? 'ঢাকার মধ্যে' : 'ঢাকার বাইরে';
-    const subtotal = product.price * quantity;
-    const orderText = `আসসালামু আলাইকুম, আমি এই পণ্যটি অর্ডার করতে চাই:\n${product.name}\nএকক মূল্য: ${money(product.price)}\nপরিমাণ: ${quantity}\nপণ্যের মূল্য: ${money(subtotal)}\nসাইজ: ${size}\nডেলিভারি এলাকা: ${deliveryLabel}\nডেলিভারি চার্জ: ${money(deliveryCharge)}\nসর্বমোট: ${money(subtotal + deliveryCharge)}\nনাম: ${data.get('name')}\nফোন: ${data.get('phone')}\nঠিকানা: ${data.get('address')}`;
-    const number = STORE_WHATSAPP.replace(/\D/g, '');
-    if (number) {
-      window.open(`https://wa.me/${number}?text=${encodeURIComponent(orderText)}`, '_blank', 'noopener,noreferrer');
-      feedback.textContent = 'অর্ডারের তথ্য WhatsApp-এ তৈরি হয়েছে। মেসেজটি পাঠান, আমরা ফোনে নিশ্চিত করব।';
-      return;
-    }
+    const submitButton = form.querySelector('[type="submit"]');
+    submitButton.disabled = true;
+    feedback.textContent = 'আপনার অর্ডার জমা হচ্ছে…';
     try {
-      await navigator.clipboard.writeText(orderText);
-      feedback.textContent = 'অর্ডারের তথ্য কপি হয়েছে। সরাসরি অর্ডার পাঠাতে দোকানের WhatsApp নম্বর যুক্ত করুন।';
-    } catch {
-      feedback.textContent = 'অর্ডারের তথ্য তৈরি হয়েছে। সরাসরি অর্ডার চালু করতে দোকানের WhatsApp নম্বর যুক্ত করুন।';
+      const response = await fetch('/api/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          productId: product.id,
+          quantity,
+          size,
+          deliveryArea,
+          name: data.get('name'),
+          phone: data.get('phone'),
+          address: data.get('address')
+        })
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || 'অর্ডার জমা করা যায়নি।');
+      try { sessionStorage.setItem(`dressify-order-${result.order.id}`, JSON.stringify(result.order)); } catch {}
+      window.location.assign(`thank-you.html?order=${encodeURIComponent(result.order.id)}`);
+    } catch (error) {
+      feedback.textContent = error.message || 'অর্ডার জমা হয়নি। ইন্টারনেট সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।';
+      submitButton.disabled = false;
     }
   });
 }
